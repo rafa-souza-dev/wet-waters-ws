@@ -3,6 +3,8 @@ const WebSocket = require("ws")
 const wss = new WebSocket.WebSocketServer({ host: '0.0.0.0' });
 
 wss.on('connection', function connection(ws) {
+  console.log("conectou!")
+
   ws.on('error', console.error);
 
   ws.on('message', function message(data, isBinary) {
