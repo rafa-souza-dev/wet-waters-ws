@@ -1,6 +1,6 @@
 const WebSocket = require("ws")
 
-const wss = new WebSocket.WebSocketServer({ host: '0.0.0.0' });
+const wss = new WebSocket.WebSocketServer({ host: '0.0.0.0', port: 8080 });
 
 wss.on('connection', function connection(ws) {
   console.log("conectou!")
